@@ -8,10 +8,11 @@ html {
     margin: 0;
     padding: 0; }
   html .container {
-    background-color: gray;
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1140px; }
+    background-color: whitesmoke;
+    margin: 2rem auto;
+    max-width: 1140px;
+    padding: 1rem;
+    width: 100%; }
     @media screen and (max-width: 1199.98px) {
       html .container {
         max-width: 820px; } }
@@ -23,4 +24,51 @@ html {
         max-width: 540px; } }
     @media screen and (max-width: 575.98px) {
       html .container {
+        margin: 0 auto;
         max-width: 100%; } }
+  html .logo-bar {
+    background-color: orange;
+    color: #e9ecef;
+    position: fixed;
+    text-align: center;
+    width: 4rem; }
+    @media screen and (max-width: 575.98px) {
+      html .logo-bar {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 1rem;
+        position: initial;
+        width: 100%; } }
+    html .logo-bar .img-logo {
+      height: 3.5rem;
+      margin-bottom: 1rem;
+      width: 3.5rem; }
+      @media screen and (max-width: 575.98px) {
+        html .logo-bar .img-logo {
+          margin-bottom: 0; } }
+    html .logo-bar .svg-brand-icon {
+      height: 1.5rem;
+      margin-bottom: 0.5rem;
+      width: 1.5rem; }
+      html .logo-bar .svg-brand-icon:hover {
+        color: #fcba03; }
+      @media screen and (max-width: 575.98px) {
+        html .logo-bar .svg-brand-icon {
+          margin-bottom: 0; } }
+    html .logo-bar + hr {
+      display: none; }
+      @media screen and (max-width: 575.98px) {
+        html .logo-bar + hr {
+          display: block; } }
+  html .articles {
+    background-color: gold;
+    margin-left: 4rem; }
+    @media screen and (max-width: 767.98px) {
+      html .articles {
+        margin-left: 0; } }
+  html .no-style,
+  html .no-style:hover,
+  html .no-style:visited {
+    color: inherit;
+    text-decoration: inherit; }
