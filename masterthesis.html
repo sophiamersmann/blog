@@ -12,6 +12,9 @@
 
   <link rel="stylesheet" href="src/assets/style/css/base.css">
   <link rel="stylesheet" href="src/assets/style/css/article.css">
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="module" src="src/assets/js/masterthesis.js"></script>
 </head>
 
 <!-- class="position-relative" data-spy="scroll" data-target="#table-of-content" data-offset="30" -->
@@ -148,6 +151,8 @@
     </div>
 
     <div class="content">
+      <hr class="article-separator">
+
       <article class="first py-3">
         <h1 id="heading-0">
           Posterior Error Probability Estimation for Peptide Search Engine Results in OpenMS
@@ -191,7 +196,7 @@
       <div class="meta">
 
         <div>
-          <b>Author</b>
+          <div class="meta-heading"><b>Author</b></div>
           <div>
             Sophia Mersmann<br>
             as part of <i>M.Sc. Bioinformatics and Theoretical Systems Biology</i><br>
@@ -200,7 +205,7 @@
         </div>
 
         <div>
-          <b>Supervisors</b>
+          <div class="meta-heading"><b>Supervisors</b></div>
           <div>
             Juliane Liepe<br>
             Oliver Alka*<br>
@@ -211,7 +216,7 @@
         </div>
 
         <div>
-          <b>Affiliations</b>
+          <div class="meta-heading"><b>Affiliations</b></div>
           <div>
             Imperial College London, UK<br>
             Google Summer Of Code 2018 (<a target="_blank"
@@ -220,7 +225,7 @@
         </div>
 
         <div>
-          <b>Date</b>
+          <div class="meta-heading"><b>Date</b></div>
           <div>
             submitted on <time datetime="2018-09-05">Sept 5, 2018</time><br>
             published on <time datetime="2020-06-04">June 4, 2020</time>
@@ -695,39 +700,39 @@
       <div class="content">
         <article>
 
-        <!-- KS figure with distributions -->
-        <figure id="figure04" class="plot figure0406">
-          <div id="figure04-A">
-            <div class="super-title row">
-              <div class="col-3"></div>
-              <div class="col-3">
-                <strong class="title-percolator">Percolator</strong>
+          <!-- KS figure with distributions -->
+          <figure id="figure04" class="plot figure0406">
+            <div id="figure04-A">
+              <div class="super-title row">
+                <div class="col-3"></div>
+                <div class="col-3">
+                  <strong class="title-percolator">Percolator</strong>
+                </div>
+                vs
+                <div class="col-3">
+                  <strong class="title-idpep">IDPEP</strong>
+                </div>
+                <div class="col-3"></div>
               </div>
-              vs
-              <div class="col-3">
-                <strong class="title-idpep">IDPEP</strong>
-              </div>
-              <div class="col-3"></div>
             </div>
-          </div>
-          <figcaption>
-            <strong>
-              <span class="caption-number">Figure 4:</span>
-              IDPEP's and Percolator's performance for search engines MS-GF+ and Comet.
-            </strong>
-            <span class="caption-text">
-              The number of correct peptide to spectrum matches (PSMs) with posterior error
-              probabilities (PEPs) below some threshold (left) are consistently higher for
-              Percolator (blue) than for IDPEP (orange), regardless of the search engine used.
-              For each protein mixture, PSM counts are averaged over all respective replicates:
-              Solid lines represent the mean and translucent bands the standard deviation.
-              Receiver operating characteristic (ROC) curves are shown on the right.
-              Percolator outperforms IDPEP by ROC area under the curve (ROC-AUC) improvements
-              ranging from 0.03 to 0.05. Mixture A+B is not shown since a comparison is not
-              possible as IDPEP failed to fit its model to the data.
-            </span>
-          </figcaption>
-        </figure>
+            <figcaption>
+              <strong>
+                <span class="caption-number">Figure 4:</span>
+                IDPEP's and Percolator's performance for search engines MS-GF+ and Comet.
+              </strong>
+              <span class="caption-text">
+                The number of correct peptide to spectrum matches (PSMs) with posterior error
+                probabilities (PEPs) below some threshold (left) are consistently higher for
+                Percolator (blue) than for IDPEP (orange), regardless of the search engine used.
+                For each protein mixture, PSM counts are averaged over all respective replicates:
+                Solid lines represent the mean and translucent bands the standard deviation.
+                Receiver operating characteristic (ROC) curves are shown on the right.
+                Percolator outperforms IDPEP by ROC area under the curve (ROC-AUC) improvements
+                ranging from 0.03 to 0.05. Mixture A+B is not shown since a comparison is not
+                possible as IDPEP failed to fit its model to the data.
+              </span>
+            </figcaption>
+          </figure>
         </article>
       </div>
     </div>
@@ -760,34 +765,34 @@
       <div class="content">
         <article>
 
-        <!-- Distributions of Percolator's internal score -->
-        <figure id="figure05" class="plot">
-          <div class="title">
-            Internal scores of <strong>Percolator</strong> applied to
-            <select class="select-mixture">
-              <option value="A">Mixture A</option>
-              <option value="B">Mixture B</option>
-              <option value="A+B">Mixture A+B</option>
-            </select>
-          </div>
-          <div class="plot-pair">
-            <div id="figure05-A" class="plot"></div>
-            <div id="figure05-B" class="plot"></div>
-          </div>
-          <figcaption>
-            <strong>
-              <span class="caption-number">Figure 5:</span>
-              Distributions of Percolator's interior score for correct and incorrect peptide
-              identifications.
-            </strong>
-            <span class="caption-text">
-              When postprocessing search results obtained from MS-GF+ (right) or Comet (left),
-              Percolator primarily assigns negative scores to incorrect peptide identifications
-              (light gold) while the majority of correct identifications (gold) lie in
-              the positive range.
-            </span>
-          </figcaption>
-        </figure>
+          <!-- Distributions of Percolator's internal score -->
+          <figure id="figure05" class="plot">
+            <div class="title">
+              Internal scores of <strong>Percolator</strong> applied to
+              <select class="select-mixture">
+                <option value="A">Mixture A</option>
+                <option value="B">Mixture B</option>
+                <option value="A+B">Mixture A+B</option>
+              </select>
+            </div>
+            <div class="plot-pair">
+              <div id="figure05-A" class="plot"></div>
+              <div id="figure05-B" class="plot"></div>
+            </div>
+            <figcaption>
+              <strong>
+                <span class="caption-number">Figure 5:</span>
+                Distributions of Percolator's interior score for correct and incorrect peptide
+                identifications.
+              </strong>
+              <span class="caption-text">
+                When postprocessing search results obtained from MS-GF+ (right) or Comet (left),
+                Percolator primarily assigns negative scores to incorrect peptide identifications
+                (light gold) while the majority of correct identifications (gold) lie in
+                the positive range.
+              </span>
+            </figcaption>
+          </figure>
         </article>
 
       </div>
@@ -832,37 +837,37 @@
       <div class="content">
         <article>
 
-        <figure id="figure06" class="plot figure0406">
-          <div id="figure06-A">
-            <div class="super-title row">
-              <div class="col-3"></div>
-              <div class="col-3">
-                <strong class="title-percolator">Percolator</strong>
+          <figure id="figure06" class="plot figure0406">
+            <div id="figure06-A">
+              <div class="super-title row">
+                <div class="col-3"></div>
+                <div class="col-3">
+                  <strong class="title-percolator">Percolator</strong>
+                </div>
+                vs
+                <div class="col-3">
+                  <strong class="title-idpep">IDPEP</strong>
+                </div>
+                <div class="col-3"></div>
               </div>
-              vs
-              <div class="col-3">
-                <strong class="title-idpep">IDPEP</strong>
-              </div>
-              <div class="col-3"></div>
             </div>
-          </div>
-          <figcaption>
-            <strong>
-              <span class="caption-number">Figure 6:</span>
-              IDPEP’s and Percolator’s performance for search engine X!Tandem.
-            </strong>
-            <span class="caption-text">
-              The number of correct peptide to spectrum matches (PSMs) with posterior error
-              probabilities (PEPs) below some threshold (left) are consistently higher for
-              Percolator (blue) than for IDPEP (orange). In fact, IDPEP performs so poorly for all
-              replicates of protein mixtures A and B that produced PEPs are virtually unusable.
-              Receiver operating characteristic (ROC) curves are shown on the right. Percolator
-              outperforms IDPEP by ROC area under the curve (ROC-AUC) improvements ranging from
-              0.05 to 0.08. Mixture A+B is not shown since a comparison is not possible as IDPEP
-              failed to fit its model to the data.
-            </span>
-          </figcaption>
-        </figure>
+            <figcaption>
+              <strong>
+                <span class="caption-number">Figure 6:</span>
+                IDPEP’s and Percolator’s performance for search engine X!Tandem.
+              </strong>
+              <span class="caption-text">
+                The number of correct peptide to spectrum matches (PSMs) with posterior error
+                probabilities (PEPs) below some threshold (left) are consistently higher for
+                Percolator (blue) than for IDPEP (orange). In fact, IDPEP performs so poorly for all
+                replicates of protein mixtures A and B that produced PEPs are virtually unusable.
+                Receiver operating characteristic (ROC) curves are shown on the right. Percolator
+                outperforms IDPEP by ROC area under the curve (ROC-AUC) improvements ranging from
+                0.05 to 0.08. Mixture A+B is not shown since a comparison is not possible as IDPEP
+                failed to fit its model to the data.
+              </span>
+            </figcaption>
+          </figure>
         </article>
       </div>
     </div>
@@ -912,7 +917,7 @@
             it is not enforced.
           </span>
         </figcaption>
-        <table class="table table-rotate">
+        <table class="table-rotate">
           <thead>
             <tr>
               <th></th>
@@ -1046,26 +1051,26 @@
       <div class="content">
         <article>
 
-        <!-- Sibling statistics figure with distributions -->
-        <figure id="figure07" class="plot">
-          <div id="figure07-B" class="figure0307-B"></div>
-          <div id="figure07-A" class="figure0307-A"></div>
-          <figcaption>
-            <strong>
-              <span class="caption-number">Figure 7:</span>
-              Discrimination of correct and incorrect peptide identifications by sibling
-              statistics.
-            </strong>
-            <span class="caption-text">
-              To investigate the ability of the proposed sibling statistics to distinguish correct
-              from incorrect peptide identifications, we inspect the difference of the means of
-              feature values for correct and incorrect identifications. To be precise, we
-              subtract the incorrect from the correct mean, i.e. positive values indicate that
-              correct identifications are assigned higher scores on average. For fair comparison,
-              all features have been min-max normalized prior to analysis.
-            </span>
-          </figcaption>
-        </figure>
+          <!-- Sibling statistics figure with distributions -->
+          <figure id="figure07" class="plot">
+            <div id="figure07-B" class="figure0307-B"></div>
+            <div id="figure07-A" class="figure0307-A"></div>
+            <figcaption>
+              <strong>
+                <span class="caption-number">Figure 7:</span>
+                Discrimination of correct and incorrect peptide identifications by sibling
+                statistics.
+              </strong>
+              <span class="caption-text">
+                To investigate the ability of the proposed sibling statistics to distinguish correct
+                from incorrect peptide identifications, we inspect the difference of the means of
+                feature values for correct and incorrect identifications. To be precise, we
+                subtract the incorrect from the correct mean, i.e. positive values indicate that
+                correct identifications are assigned higher scores on average. For fair comparison,
+                all features have been min-max normalized prior to analysis.
+              </span>
+            </figcaption>
+          </figure>
         </article>
       </div>
     </div>
@@ -1161,23 +1166,23 @@
       <div class="content">
         <article>
 
-        <!-- Feature Correlations -->
-        <figure id="figure08" class="plot">
-          <div id="figure08-A">
-          </div>
-          <figcaption>
-            <strong>
-              <span class="caption-number">Figure 8:</span>
-              Pairwise correlations of all sibling features.
-            </strong>
-            <span class="caption-text">
-              The correlation matrix depicts measured Pearson correlation coeffiecients between
-              all possible feature pairs. Peptide-based and precursor ion-based features are found
-              to correlate more strongly within their respective group (yellow boxes).
-            </span>
-          </figcaption>
-        </figure>
-      </article>
+          <!-- Feature Correlations -->
+          <figure id="figure08" class="plot">
+            <div id="figure08-A">
+            </div>
+            <figcaption>
+              <strong>
+                <span class="caption-number">Figure 8:</span>
+                Pairwise correlations of all sibling features.
+              </strong>
+              <span class="caption-text">
+                The correlation matrix depicts measured Pearson correlation coeffiecients between
+                all possible feature pairs. Peptide-based and precursor ion-based features are found
+                to correlate more strongly within their respective group (yellow boxes).
+              </span>
+            </figcaption>
+          </figure>
+        </article>
       </div>
     </div>
   </div>

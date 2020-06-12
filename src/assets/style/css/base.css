@@ -82,12 +82,12 @@ html {
     @media screen and (max-width: 575.98px) {
       html .content {
         margin: 0; } }
-    html .content hr {
+    html .content .article-separator {
       margin: 1rem; }
-      html .content hr:first-of-type {
+      html .content .article-separator:first-of-type {
         display: none; }
         @media screen and (max-width: 575.98px) {
-          html .content hr:first-of-type {
+          html .content .article-separator:first-of-type {
             display: block; } }
     html .content .item {
       display: flex;
@@ -116,7 +116,7 @@ html {
     html h2 + div {
       font-size: 1.2em;
       font-weight: 300; }
-  html hr {
+  html .article-separator {
     height: 0.25px;
     border: 0;
     background: #e9ecef;
@@ -124,6 +124,11 @@ html {
   html .img-fluid {
     max-width: 100%;
     height: auto; }
+  html a:not([class]) {
+    color: #336699;
+    text-decoration: none; }
+  html a:not([class]):hover {
+    background-color: #bedcee; }
   html .no-style,
   html .no-style:hover,
   html .no-style:visited {

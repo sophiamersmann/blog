@@ -1,5 +1,25 @@
 @import 'global';
 
+.banner {
+  border-top: 3px solid $secondary;
+  border-bottom: 3px solid $secondary;
+  background-color: $secondary-fade;
+}
+
+.meta {
+  display: flex;
+  font-size: 0.95rem;
+
+  & > div {
+    flex: 1 0 0;
+    padding: 0 $spacing / 4;
+  }
+
+  .meta-heading {
+    margin-bottom: 2px;
+  }
+}
+
 article {
   padding: 0 $spacing / 2;
 
@@ -7,27 +27,169 @@ article {
     padding: $spacing / 2;
   }
 
-  figure {
-    text-align: center;
+  .abstract {
+    color: gray;
+    font-weight: 300;
+  }
 
-    figcaption {
-      text-align: left;
+  h1,
+  h2,
+  h3 {
+    margin-bottom: $spacing / 4;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    margin-bottom: $spacing / 2;
+    line-height: 1.5;
+    text-align: justify;
+  }
+}
+
+figure {
+  margin: $spacing / 2 0;
+  text-align: center;
+
+  &.plot {
+    margin: 0;
+  }
+
+  & > figcaption {
+    margin-bottom: $spacing / 2;
+  }
+
+  figcaption {
+    font-size: 0.9rem;
+    line-height: 1.25;
+    text-align: justify;
+  }
+
+  .caption-number {
+    color: $primary;
+  }
+
+  .caption-text {
+    color: gray;
+  }
+}
+
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+  @include max-width($extra-small) {
+    font-size: 0.7rem;
+  }
+
+  tbody,
+  thead {
+    border-top: 2px solid $gray;
+    border-bottom: 2px solid $gray;
+  }
+
+  td,
+  th {
+    padding: 0.75rem;
+    border-top: 1px solid $gray;
+    vertical-align: top;
+  }
+
+  thead th {
+    border-bottom: 2px solid $gray;
+    vertical-align: bottom;
+  }
+
+  tbody td,
+  tbody th,
+  thead th {
+    text-align: left;
+  }
+
+  tbody th[rowspan="4"] {
+    vertical-align: middle;
+  }
+
+  tbody + tbody {
+    border-top: 2px solid $gray;
+  }
+}
+
+.table-rotate {
+  .rotate {
+    height: 120px;
+    white-space: nowrap;
+
+    & > div {
+      @include rotate(-35deg);
+      width: 1rem;
+      @include max-width($small) {
+        @include rotate(-90deg);
+      }
     }
   }
 }
 
-.banner {
-  background-color: $secondary-fade;
-  border-bottom: 3px solid $secondary;
-  border-top: 3px solid $secondary;
+.dot {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+
+  &.dot-negative {
+    background-color: #bbb;
+  }
+
+  &.dot-positive {
+    background-color: #fcba03;
+  }
 }
 
-.meta {
-  padding: $spacing / 4 0;
+.list-of-references {
+  margin-top: 5rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+
+  hr {
+    height: 0.25px;
+    margin-bottom: $spacing / 2;
+    border: 0;
+    background: $primary;
+    color: $primary;
+  }
+
+  .ref .title {
+    font-weight: 500;
+  }
+
+  .ref .journal {
+    font-style: italic;
+  }
+}
+
+.ref-wrapper {
   display: flex;
 
-  &>div {
-    flex: 1 0 0;
-    padding: 0 $spacing / 4;
+  .ref-number {
+    flex: 0 1 auto;
+    margin-right: $spacing / 2;
+    // TODO: Custom monospace
+    font-family: monospace;
   }
+
+  .ref {
+    flex: 1 0 0;
+  }
+}
+
+.cite {
+  color: $primary;
 }
