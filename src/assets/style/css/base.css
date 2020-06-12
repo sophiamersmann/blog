@@ -13,21 +13,21 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0; }
-  html .container {
+  html body {
     max-width: 820px;
     margin: 0.5rem auto;
     padding: 1rem; }
     @media screen and (max-width: 1199.98px) {
-      html .container {
+      html body {
         max-width: 820px; } }
     @media screen and (max-width: 991.98px) {
-      html .container {
+      html body {
         max-width: 720px; } }
     @media screen and (max-width: 767.98px) {
-      html .container {
+      html body {
         max-width: 540px; } }
     @media screen and (max-width: 575.98px) {
-      html .container {
+      html body {
         max-width: 100%;
         margin: 0 auto; } }
   html .logo-bar {
