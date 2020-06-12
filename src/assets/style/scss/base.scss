@@ -109,6 +109,14 @@ html {
       flex-direction: column;
       justify-content: space-between;
       padding-right: 1rem;
+
+      .title {
+        flex: 1 0 auto;
+      }
+
+      .date {
+        flex: 0 1 auto;
+      }
     }
 
     .right {
@@ -117,7 +125,7 @@ html {
       img {
         max-width: 100%;
         height: auto;
-        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
       }
     }
   }
@@ -145,5 +153,23 @@ html {
   .no-style:visited {
     color: inherit;
     text-decoration: inherit;
+  }
+  @include max-width($extra-small) {
+    %truncate {
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .truncate-1 {
+      @extend %truncate;
+      -webkit-line-clamp: 1;
+    }
+
+    .truncate-2 {
+      @extend %truncate;
+      -webkit-line-clamp: 2;
+    }
   }
 }
