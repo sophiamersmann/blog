@@ -193,3 +193,18 @@ table {
 .cite {
   color: $primary;
 }
+
+.progress {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1rem;
+  background-color: $gray;
+
+  .progress-bar {
+    background-color: $primary;
+    transition: width 0.6s ease;
+  }
+}
