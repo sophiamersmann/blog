@@ -9,6 +9,13 @@ function updateProgressBar(selector, docHeight, winHeight) {
   $(selector).css('width', `${scrollPercent}%`);
 }
 
+function scrollToTarget(event) {
+  const target = $(event.currentTarget.hash);
+  if (target) {
+    $('html, body').animate({ scrollTop: target.offset().top - 15 }, 500);
+  }
+}
+
 $(document).ready(() => {
   const docHeight = $(document).height();
   const winHeight = $(window).height();
@@ -27,4 +34,7 @@ $(document).ready(() => {
     '.list-of-references',
     '.cite-ref>a',
   );
+
+  // on click, scroll to target
+  $('a[href^="#"]').click(scrollToTarget);
 });
