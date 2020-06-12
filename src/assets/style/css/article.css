@@ -1,0 +1,20 @@
+article {
+  padding: 0 1rem; }
+  article.first {
+    padding: 1rem; }
+  article figure {
+    text-align: center; }
+    article figure figcaption {
+      text-align: left; }
+
+.banner {
+  background-color: #fcfcfc;
+  border-bottom: 3px solid #336699;
+  border-top: 3px solid #336699; }
+
+.meta {
+  padding: 0.5rem 0;
+  display: flex; }
+  .meta > div {
+    flex: 1 0 0;
+    padding: 0 0.5rem; }

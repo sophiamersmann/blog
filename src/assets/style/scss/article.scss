@@ -1,0 +1,33 @@
+@import 'global';
+
+article {
+  padding: 0 $spacing / 2;
+
+  &.first {
+    padding: $spacing / 2;
+  }
+
+  figure {
+    text-align: center;
+
+    figcaption {
+      text-align: left;
+    }
+  }
+}
+
+.banner {
+  background-color: $secondary-fade;
+  border-bottom: 3px solid $secondary;
+  border-top: 3px solid $secondary;
+}
+
+.meta {
+  padding: $spacing / 4 0;
+  display: flex;
+
+  &>div {
+    flex: 1 0 0;
+    padding: 0 $spacing / 4;
+  }
+}
