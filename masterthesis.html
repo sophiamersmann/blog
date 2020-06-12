@@ -92,7 +92,7 @@
   </div> -->
 
   <!-- Dynamic progress bar -->
-  <div class="progress fixed-top">
+  <div class="progress">
     <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
          aria-valuemax="100"></div>
   </div>
@@ -153,13 +153,13 @@
     <div class="content">
       <hr class="article-separator">
 
-      <article class="first py-3">
+      <article class="first">
         <h1 id="heading-0">
           Posterior Error Probability Estimation for Peptide Search Engine Results in OpenMS
         </h1>
 
         <!-- Abstract -->
-        <p class="abstract text-justify font-weight-light mb-0">
+        <p class="abstract">
           Tandem mass spectrometry (MS/MS) is the standard technique for protein identification and
           quantification. The first step in a bottom-up shotgun MS/MS experiment typically involves
           enzymatic digestion of the protein sample of interest, resulting in a complex peptide
@@ -190,7 +190,7 @@
 
   </div>
 
-  <div class="banner py-3">
+  <div class="banner">
 
     <div class="container-wide">
       <div class="meta">
@@ -239,45 +239,43 @@
 
   <div class="container">
     <div class="content">
-      <article class="py-3">
+      <article>
 
         <h2 id="heading-1">Introduction</h2>
 
-        <p class="text-justify">
+        <p>
           <strong>OpenMS facilitates rapid development of complex mass spectrometric
             workflows.</strong>
           Tandem mass spectrometry (MS/MS; <span class="cite"><a class="no-style"
                href="#figure01">Fig. 1</a></span>) is the <em>de facto</em> standard
           experimental
           method for high-throughput protein identification and quantification <span
-                class="cite cite-ref text-monospace">[<a class="no-style Aebersold2003"
+                class="cite cite-ref">[<a class="no-style Aebersold2003"
                href="#Aebersold2003-ref"></a>]</span>. Analysis and interpretation of mass
           spectrometric (MS) data, however, typically require a multitude of steps - from processing
           raw experimental data over peptide to protein identification and possibly quantification,
           often using several software tools and various file formats <span
-                class="cite cite-ref text-monospace">[<a class="no-style Sinitcyn2018"
+                class="cite cite-ref">[<a class="no-style Sinitcyn2018"
                href="#Sinitcyn2018-ref"></a>,<a class="no-style Noble2012"
                href="#Noble2012-ref"></a>,<a class="no-style Mead2007" href="#Mead2007-ref"></a>,<a
                class="no-style Matthiesen2007" href="#Matthiesen2007-ref"></a>]</span>. To support
           researchers working with MS data, there has been a tremendous effort to develop software
           applications that allow the rapid development of easily reproducible mass spectrometric
           pipelines by providing quick access to MS data processing and analysis tools <span
-                class="cite cite-ref text-monospace">[<a class="no-style Malm2014"
-               href="#Malm2014-ref"></a>,<a class="no-style Tyanova2016"
-               href="#Tyanova2016-ref"></a>,<a class="no-style McIlwain2014"
-               href="#McIlwain2014-ref"></a>,<a class="no-style Deutsch2015"
-               href="#Deutsch2015-ref"></a>,<a class="no-style Rost2016"
-               href="#Rost2016-ref"></a>]</span>. One widely used software
+                class="cite cite-ref">[<a class="no-style Malm2014" href="#Malm2014-ref"></a>,<a
+               class="no-style Tyanova2016" href="#Tyanova2016-ref"></a>,<a
+               class="no-style McIlwain2014" href="#McIlwain2014-ref"></a>,<a
+               class="no-style Deutsch2015" href="#Deutsch2015-ref"></a>,<a
+               class="no-style Rost2016" href="#Rost2016-ref"></a>]</span>. One widely used software
           platform for MS data analysis is OpenMS, an open-source software platform implemented in
           C++, which enables users to conveniently develop complex quantitative mass spectrometric
-          workflows via a drag-and-drop scheme of application nodes <span
-                class="cite cite-ref text-monospace">[<a class="no-style Rost2016"
-               href="#Rost2016-ref"></a>]</span>.
+          workflows via a drag-and-drop scheme of application nodes <span class="cite cite-ref">[<a
+               class="no-style Rost2016" href="#Rost2016-ref"></a>]</span>.
         </p>
 
         <figure id="figure01" class="py-1">
-          <img class="img-fluid d-block mx-auto mb-2" width="526" height="335"
-               src="src/assets/img/a01-fig01-526x335.svg" alt="Text description of the image">
+          <img class="img-fluid" width="526" height="335"
+               src="src/assets/img/a01-fig01-526x335.svg">
           <figcaption>
             <strong>
               <span class="caption-number">Figure 1:</span>
@@ -297,7 +295,7 @@
           </figcaption>
         </figure>
 
-        <p class="text-justify">
+        <p>
           <strong>Peptide identifications reported by search engines often miss a notion of
             statistical significance.</strong>
           A common task in proteomics is to identify proteins in complex biological mixtures. In a
@@ -316,9 +314,9 @@
           identifications.
         </p>
 
-        <figure id="figure02" class="py-1">
-          <img class="img-fluid d-block mx-auto mb-2" width="317" height="689"
-               src="src/assets/img/a01-fig02-317x689.svg" alt="Text description of the image">
+        <figure id="figure02">
+          <img class="img-fluid" width="317" height="689"
+               src="src/assets/img/a01-fig02-317x689.svg">
           <figcaption>
             <strong>
               <span class="caption-number">Figure 2:</span>
@@ -340,12 +338,12 @@
 
         <h3 id="heading-1-1">Statistical validation of peptide identifications in OpenMS</h3>
 
-        <p class="text-justify">
+        <p>
           <strong>Posterior error probabilities quantify the uncertainty in individual peptide
             identifications.</strong>
           Several statistical measures have been developed to quantify the confidence in either a
           single or a set of peptide identifications scored by a peptide search engine <span
-                class="cite cite-ref text-monospace">[<a class="no-style Granholm2011"
+                class="cite cite-ref">[<a class="no-style Granholm2011"
                href="#Granholm2011-ref"></a>]</span>. In this work, we focus on situations in which
           one is interested in the identification of individual proteins (rather than a set of
           proteins); for example, when determining whether a certain protein is expressed in a
@@ -363,50 +361,50 @@
           identified spectrum.
         </p>
 
-        <p class="text-justify">
+        <p>
           <strong>OpenMS' tool for PEP estimation leaves room for improvement.</strong>
           The described model currently implemented in OpenMS suffers from several shortcomings.
           First, it is not guaranteed that PSM scores follow the chosen parametric distributions.
           Finding appropriate default score distributions that are applicable in the general case
           proves to be difficult since these depend on the scoring algorithm used <span
-                class="cite cite-ref text-monospace">[<a class="no-style Choi2008"
-               href="#Choi2008-ref"></a>,<a class="no-style Ma2012" href="#Ma2012-ref"></a>]</span>.
+                class="cite cite-ref">[<a class="no-style Choi2008" href="#Choi2008-ref"></a>,<a
+               class="no-style Ma2012" href="#Ma2012-ref"></a>]</span>.
           Secondly, only a single PSM score retrieved from a peptide search algorithm is taken into
           account ignoring other valuable information a search engine might return. The added
           information gained from incorporating additional PSM scores as well as peptide properties
-          has been shown to result in improved performance <span
-                class="cite cite-ref text-monospace">[<a class="no-style Ma2012"
-               href="#Ma2012-ref"></a>,<a class="no-style Keller2002" href="#Keller2002-ref"></a>,<a
-               class="no-style Cox2008" href="#Cox2008-ref"></a>]</span>. Addressing these
+          has been shown to result in improved performance <span class="cite cite-ref">[<a
+               class="no-style Ma2012" href="#Ma2012-ref"></a>,<a class="no-style Keller2002"
+               href="#Keller2002-ref"></a>,<a class="no-style Cox2008"
+               href="#Cox2008-ref"></a>]</span>. Addressing these
           shortcomings in OpenMS promises to lead to improved PEP estimation for peptide search
           engine results.
         </p>
 
-        <p class="text-justify">
+        <p>
           <strong>PeptideProphet: A family of sophisticated methods for accurate PEP
             estimation.</strong>
           IDPEP is loosely based on a widely used empirical statistical model to estimate the
-          accuracy of peptide identifications called PeptideProphet <span
-                class="cite cite-ref text-monospace">[<a class="no-style Keller2002"
-               href="#Keller2002-ref"></a>]</span>. Having evolved into a whole family of methods,
+          accuracy of peptide identifications called PeptideProphet <span class="cite cite-ref">[<a
+               class="no-style Keller2002" href="#Keller2002-ref"></a>]</span>. Having evolved into
+          a whole family of methods,
           PeptideProphet has already proposed more sophisticated methods that address the described
-          limitations in OpenMS <span class="cite cite-ref text-monospace">[<a
-               class="no-style Choi2008" href="#Choi2008-ref"></a>,<a class="no-style Ma2012"
-               href="#Ma2012-ref"></a>]</span>. To overcome restrictive parametric forms of the
+          limitations in OpenMS <span class="cite cite-ref">[<a class="no-style Choi2008"
+               href="#Choi2008-ref"></a>,<a class="no-style Ma2012" href="#Ma2012-ref"></a>]</span>.
+          To overcome restrictive parametric forms of the
           mixture model, Nesvizhskii and colleagues developed a variety of more flexible probability
-          models, all having strengths and limitations of their own <span
-                class="cite cite-ref text-monospace">[<a class="no-style Choi2008"
-               href="#Choi2008-ref"></a>,<a class="no-style Ma2012" href="#Ma2012-ref"></a>,<a
-               class="no-style Choi2008a" href="#Choi2008a-ref"></a>,<a class="no-style Renard2010"
-               href="#Renard2010-ref"></a>]</span>. Although shown to work reasonably well in the
+          models, all having strengths and limitations of their own <span class="cite cite-ref">[<a
+               class="no-style Choi2008" href="#Choi2008-ref"></a>,<a class="no-style Ma2012"
+               href="#Ma2012-ref"></a>,<a class="no-style Choi2008a" href="#Choi2008a-ref"></a>,<a
+               class="no-style Renard2010" href="#Renard2010-ref"></a>]</span>. Although shown to
+          work reasonably well in the
           general case, some suffer from potential overfitting <span class="cite cite-ref">[<a
                class="no-style Ma2012" href="#Ma2012-ref"></a>]</span> while others are
-          computationally demanding <span class="cite cite-ref text-monospace">[<a
-               class="no-style Choi2008" href="#Choi2008-ref"></a>]</span>. Furthermore, to
+          computationally demanding <span class="cite cite-ref">[<a class="no-style Choi2008"
+               href="#Choi2008-ref"></a>]</span>. Furthermore, to
           incorporate more than a single score into the model of PeptideProphet, Keller <em>et
             al.</em> first summarise multiple quantities into a single entity preserving most of the
           intrinsic information using linear discriminant analysis in a supervised machine learning
-          approach <span class="cite cite-ref text-monospace">[<a class="no-style Keller2002"
+          approach <span class="cite cite-ref">[<a class="no-style Keller2002"
                href="#Keller2002-ref"></a>]</span>. There are, however, several difficulties in
           realizing this approach. First, supervised training requires labelled high-quality MS data
           of known proteins which is difficult to obtain. Secondly, a pre-computed "fixed"
@@ -416,12 +414,12 @@
 
         <h3 id="heading-1-2">An alternative state-of-the-art tool for PEP estimation</h3>
 
-        <p class="text-justify">
+        <p>
           <strong>Semi-supervised learning tailors PEP estimation to the mass spectrometric data at
             hand.</strong>
           An interesting, alternative approach to quantify the confidence in PSM scores has been
-          proposed by Käll <em>et al.</em> <span class="cite cite-ref text-monospace">[<a
-               class="no-style Kall2007" href="#Kall2007-ref"></a>,<a class="no-style Spivak2009"
+          proposed by Käll <em>et al.</em> <span class="cite cite-ref">[<a class="no-style Kall2007"
+               href="#Kall2007-ref"></a>,<a class="no-style Spivak2009"
                href="#Spivak2009-ref"></a>,<a class="no-style The2016"
                href="#The2016-ref"></a>]</span>. The general idea is to establish a semi-supervised
           machine learning method that is dynamically trained on data of a particular MS/MS
@@ -432,49 +430,48 @@
           generated dataset of peptides known to be incorrect (decoy dataset) and a subset of
           high-scoring PSMs considered to be correct. The SVM then learns to discriminate between
           correctly and incorrectly identified PSMs. Based on Percolator scores, PEPs are estimated
-          using non-parametric logistic regression <span class="cite cite-ref text-monospace">[<a
+          using non-parametric logistic regression <span class="cite cite-ref">[<a
                class="no-style Kall2008" href="#Kall2008-ref"></a>,<a class="no-style Kall2009"
                href="#Kall2009-ref"></a>]</span>.
         </p>
 
-        <p class="text-justify">
+        <p>
           <strong>Enhancing Percolator's performance when a single protein sample has been analysed
             multiple times.</strong>
           In an attempt to increase the number of statistically significant peptides detected,
           previous work has mainly focused on combining search results reported by different engines
-          applied to the same set of observed mass spectra <span
-                class="cite cite-ref text-monospace">[<a class="no-style Shteynberg2011"
-               href="#Shteynberg2011-ref"></a>,<a class="no-style Jones2009"
-               href="#Jones2009-ref"></a>,<a class="no-style Wen2015" href="#Wen2015-ref"></a>,<a
-               class="no-style Edwards2009" href="#Edwards2009-ref"></a>,<a
-               class="no-style Kwon2011" href="#Kwon2011-ref"></a>,<a class="no-style Searle2008"
+          applied to the same set of observed mass spectra <span class="cite cite-ref">[<a
+               class="no-style Shteynberg2011" href="#Shteynberg2011-ref"></a>,<a
+               class="no-style Jones2009" href="#Jones2009-ref"></a>,<a class="no-style Wen2015"
+               href="#Wen2015-ref"></a>,<a class="no-style Edwards2009"
+               href="#Edwards2009-ref"></a>,<a class="no-style Kwon2011"
+               href="#Kwon2011-ref"></a>,<a class="no-style Searle2008"
                href="#Searle2008-ref"></a>]</span>. However, it has become common practice to
           analyse a protein sample of interest multiple times via replicate MS runs <span
-                class="cite cite-ref text-monospace">[<a class="no-style Li2009"
-               href="#Li2009-ref"></a>,<a class="no-style Isserlin2008"
-               href="#Isserlin2008-ref"></a>]</span>, thereby generating highly overlapping datasets
+                class="cite cite-ref">[<a class="no-style Li2009" href="#Li2009-ref"></a>,<a
+               class="no-style Isserlin2008" href="#Isserlin2008-ref"></a>]</span>, thereby
+          generating highly overlapping datasets
           used to, for example, reconstruct protein interaction networks <span
-                class="cite cite-ref text-monospace">[<a class="no-style Sowa2009"
-               href="#Sowa2009-ref"></a>,<a class="no-style Breitkreutz2010"
-               href="#Breitkreutz2010-ref"></a>]</span> or characterise proteomes of model organisms
-          <span class="cite cite-ref text-monospace">[<a class="no-style Brunner2007"
+                class="cite cite-ref">[<a class="no-style Sowa2009" href="#Sowa2009-ref"></a>,<a
+               class="no-style Breitkreutz2010" href="#Breitkreutz2010-ref"></a>]</span> or
+          characterise proteomes of model organisms
+          <span class="cite cite-ref">[<a class="no-style Brunner2007"
                href="#Brunner2007-ref"></a>,<a class="no-style Baerenfaller2008"
                href="#Baerenfaller2008-ref"></a>,<a class="no-style DeGodoy2008"
                href="#DeGodoy2008-ref"></a>]</span>. Naïvely, replicate datasets can be analysed
           individually before combining reported results in the final step of a protocol (e.g. by
           considering the union or intersection of peptides detected in different runs). Even though
           taking into account replicate runs has been shown to improve peptide inference <span
-                class="cite cite-ref text-monospace">[<a class="no-style Liu2004"
-               href="#Liu2004-ref"></a>,<a class="no-style Resing2004"
-               href="#Resing2004-ref"></a>,<a class="no-style Elias2005"
+                class="cite cite-ref">[<a class="no-style Liu2004" href="#Liu2004-ref"></a>,<a
+               class="no-style Resing2004" href="#Resing2004-ref"></a>,<a class="no-style Elias2005"
                href="#Elias2005-ref"></a>]</span>, there has been little
           work to <em>leverage</em>
-          information between replicate runs when estimating PEPs <span
-                class="cite cite-ref text-monospace">[<a class="no-style Shteynberg2011"
-               href="#Shteynberg2011-ref"></a>,<a class="no-style Griffin2010"
-               href="#Griffin2010-ref"></a>]</span>. A notable exception is iProphet, which refines
+          information between replicate runs when estimating PEPs <span class="cite cite-ref">[<a
+               class="no-style Shteynberg2011" href="#Shteynberg2011-ref"></a>,<a
+               class="no-style Griffin2010" href="#Griffin2010-ref"></a>]</span>. A notable
+          exception is iProphet, which refines
           an initial PeptideProphet analysis by using information available from highly overlapping
-          datasets <span class="cite cite-ref text-monospace">[<a class="no-style Shteynberg2011"
+          datasets <span class="cite cite-ref">[<a class="no-style Shteynberg2011"
                href="#Shteynberg2011-ref"></a>]</span>. We here expand on Percolator by encoding
           novel features that combine evidence across replicate runs for a protein sample that has
           been analysed multiple times.
@@ -482,17 +479,16 @@
 
         <h3 id="heading-1-3">Scope of this work</h3>
 
-        <p class="text-justify">
+        <p>
           <strong>Improve PEP estimation in OpenMS.</strong>
           Since IDPEP has not yet been tested thoroughly - even though it is already fully supported
           by OpenMS - we, firstly, assess IDPEP's ability to accurately estimate PEPs using a rich
           dataset of known ground truth. To ensure our findings are valid across various mass
           spectrometric workflows, we evaluate IDPEP in combination with a range of popular peptide
-          search engines including X!Tandem <span class="cite cite-ref text-monospace">[<a
+          search engines including X!Tandem <span class="cite cite-ref">[<a
                class="no-style Craig2004" href="#Craig2004-ref"></a>]</span>, MS-GF+ <span
-                class="cite cite-ref text-monospace">[<a class="no-style Kim2014"
-               href="#Kim2014-ref"></a>]</span>, and Comet <span
-                class="cite cite-ref text-monospace">[<a class="no-style Eng2013"
+                class="cite cite-ref">[<a class="no-style Kim2014" href="#Kim2014-ref"></a>]</span>,
+          and Comet <span class="cite cite-ref">[<a class="no-style Eng2013"
                href="#Eng2013-ref"></a>]</span>. Secondly, we compare IDPEP with Percolator with the
           intent to replace the former by the latter in OpenMS (in case of superior performance).
           Finally, we aim to improve Percolator's performance when a protein sample has been
@@ -503,11 +499,11 @@
 
         <h2 id="heading-2">Material and Methods</h2>
 
-        <p class="text-justify">
+        <p>
           <strong>Experimental data.</strong>
           For evaluation purposes, we use MS data produced and published by The Proteome Informatics
           Research Group (iPRG) for the iPRG 2016/2017 study "Inferring Proteoforms from Bottom-up
-          Proteomics Data" <span class="cite cite-ref text-monospace">[<a class="no-style The2018"
+          Proteomics Data" <span class="cite cite-ref">[<a class="no-style The2018"
                href="#The2018-ref"></a>,<a class="no-style Lee2018"
                href="#Lee2018-ref"></a>]</span>.
           For the study, different combinations of partially
@@ -525,41 +521,41 @@
           B; the blank mixture is ignored due to the lack of true positives.
         </p>
 
-        <p class="text-justify">
+        <p>
           <strong>Peptide search engines.</strong>
           After conversion of the given raw experimental data to mzML format using a conversion tool
-          provided in the ProteoWizard Toolkit <span class="cite cite-ref text-monospace">[<a
+          provided in the ProteoWizard Toolkit <span class="cite cite-ref">[<a
                class="no-style Chambers2012" href="#Chambers2012-ref"></a>]</span>, experimental
           spectra were searched against the iPRG dataset using peptide search engines X!Tandem
-          (release VENGEANCE (2015.12.15)) <span class="cite cite-ref text-monospace">[<a
+          (release VENGEANCE (2015.12.15)) <span class="cite cite-ref">[<a
                class="no-style Craig2004" href="#Craig2004-ref"></a>]</span>, MS-GF+ (version
-          v20180130) <span class="cite cite-ref text-monospace">[<a class="no-style Kim2014"
+          v20180130) <span class="cite cite-ref">[<a class="no-style Kim2014"
                href="#Kim2014-ref"></a>]</span>, and Comet (version 2016013) <span
-                class="cite cite-ref text-monospace">[<a class="no-style Eng2013"
-               href="#Eng2013-ref"></a>]</span>. All three search engines considered semi-tryptic
+                class="cite cite-ref">[<a class="no-style Eng2013" href="#Eng2013-ref"></a>]</span>.
+          All three search engines considered semi-tryptic
           peptides only and were constrained to a precursor ion mass tolerance of 15ppm that has
-          been shown to be optimal for Orbitrap machines <span
-                class="cite cite-ref text-monospace">[<a class="no-style Yu2016"
-               href="#Yu2016-ref"></a>]</span>. For MS-GF+, the experimental set up was mirrored in
+          been shown to be optimal for Orbitrap machines <span class="cite cite-ref">[<a
+               class="no-style Yu2016" href="#Yu2016-ref"></a>]</span>. For MS-GF+, the experimental
+          set up was mirrored in
           the parameter settings by specifying the instrument (Q Exactive Orbitrap) and
           fragmentation method (HCD) used. The remaining parameters were left to their defaults. All
           engines were run in OpenMS (version 2.4).
         </p>
 
-        <p class="text-justify">
+        <p>
           <strong>Decoy database and search strategy.</strong>
           For each dataset, experimental spectra were searched against the iPRG database and a decoy
           dataset in a separate target-decoy search strategy. The decoy dataset was derived from the
           target database simply by reversing each protein sequence.
         </p>
 
-        <p class="text-justify">
+        <p>
           <strong>PEP estimation.</strong>
           IDPEP and Percolator (version 3.2) were both run in OpenMS (version 2.4), all parameters
           were left to their defaults.
         </p>
 
-        <p class="text-justify">
+        <p>
           <strong>Statistics.</strong>
           For comparison of distributions we used either the Kolmogorov-Smirnov (KS) test statistic
           (when one of the distributions was empirical) or the two-sample KS test (when both tested
@@ -571,24 +567,23 @@
 
         <h3 id="heading-3-1">Percolator outperforms IDPEP</h3>
 
-        <p class="text-justify">
+        <p>
           OpenMS' in-house tool IDPEP does not meet the latest developments of state-of-the-art
           methods for PEP estimation, and has been noticed to behave unreliably in practice. In an
           attempt to find a suitable replacement, we compare IDPEP with a modern widely-used method
-          for PEP estimation, called Percolator <span class="cite cite-ref text-monospace">[<a
+          for PEP estimation, called Percolator <span class="cite cite-ref">[<a
                class="no-style Kall2007" href="#Kall2007-ref"></a>,<a class="no-style Spivak2009"
                href="#Spivak2009-ref"></a>,<a class="no-style The2016"
                href="#The2016-ref"></a>]</span>, using experimental data from three protein mixtures
           (á three technical replicates) in combination with three popular peptide search engines
-          (X!Tandem <span class="cite cite-ref text-monospace">[<a class="no-style Craig2004"
-               href="#Craig2004-ref"></a>]</span>, MS-GF+ <span
-                class="cite cite-ref text-monospace">[<a class="no-style Kim2014"
-               href="#Kim2014-ref"></a>]</span>, and Comet <span
-                class="cite cite-ref text-monospace">[<a class="no-style Eng2013"
+          (X!Tandem <span class="cite cite-ref">[<a class="no-style Craig2004"
+               href="#Craig2004-ref"></a>]</span>, MS-GF+ <span class="cite cite-ref">[<a
+               class="no-style Kim2014" href="#Kim2014-ref"></a>]</span>, and Comet <span
+                class="cite cite-ref">[<a class="no-style Eng2013"
                href="#Eng2013-ref"></a>]</span>).
         </p>
 
-        <p class="text-justify">
+        <p>
           <strong>Peptide search engines rank detected PSMs according to a custom scoring scheme,
             thereby providing a starting point for PEP estimation tools.</strong>
           Although the comparison of search engine performance is not the focus of this work, we
@@ -617,8 +612,8 @@
 
   </div>
 
-  <div id="figure03-anchor" class="banner py-3">
-    <div class="container mx-auto">
+  <div id="figure03-anchor" class="banner">
+    <div class="container">
       <div class="content">
         <article>
 
@@ -650,10 +645,10 @@
     </div>
   </div>
 
-  <div class="container mx-auto">
-    <article class="content py-3">
+  <div class="container">
+    <article class="content">
 
-      <p class="text-justify">
+      <p>
         <strong>Broken assumptions underlying IDPEP contribute to unsuccessful fitting.</strong>
         Noticeably, IDPEP fails to fit its proposed mixture model to any search engine result
         regarding protein mixture A+B. Mixture A+B differs from the other mixtures by containing
@@ -673,7 +668,7 @@
         incorrect.
       </p>
 
-      <p class="text-justify">
+      <p>
         <strong>Percolator correctly identifies a higher number of PSMs than IDPEP while picking
           up less false positives.</strong>
         For search engines MS-GF+ and Comet (X!Tandem results are discussed separately),
@@ -695,8 +690,8 @@
     </article>
   </div>
 
-  <div id="figure04-anchor" class="banner py-3">
-    <div class="container mx-auto">
+  <div id="figure04-anchor" class="banner">
+    <div class="container">
       <div class="content">
         <article>
 
@@ -738,10 +733,10 @@
     </div>
   </div>
 
-  <div class="container mx-auto">
-    <article class="content py-3">
+  <div class="container">
+    <article class="content">
 
-      <p class="text-justify">
+      <p>
         <strong>A peek under the hood: Percolator's interior scoring scheme significantly
           discriminates correct from incorrect PSMs.
         </strong>
@@ -760,8 +755,8 @@
     </article>
   </div>
 
-  <div id="figure05-anchor" class="banner py-3">
-    <div class="container mx-auto">
+  <div id="figure05-anchor" class="banner">
+    <div class="container">
       <div class="content">
         <article>
 
@@ -799,10 +794,10 @@
     </div>
   </div>
 
-  <div class="container mx-auto">
-    <article class="content py-3">
+  <div class="container">
+    <article class="content">
 
-      <p class="text-justify">
+      <p>
         <strong>When presented with challenging input data, Percolator's performance is more
           stable than IDPEP's.</strong> As noted earlier, X!Tandem's ability to discriminate
         correct from incorrect identifications is limited when compared to MS-GF+ and Comet.
@@ -832,8 +827,8 @@
     </article>
   </div>
 
-  <div id="figure06-anchor" class="banner py-3">
-    <div class="container mx-auto">
+  <div id="figure06-anchor" class="banner">
+    <div class="container">
       <div class="content">
         <article>
 
@@ -873,19 +868,19 @@
     </div>
   </div>
 
-  <div class="container mx-auto">
-    <article class="content py-3">
+  <div class="container">
+    <article class="content">
 
       <h3 id="heading-3-2">Leveraging information across multiple sibling experiments improves
         peptide identification</h3>
 
-      <p class="text-justify">
+      <p>
         After showing Percolator's superiority over IDPEP, the second aim of this work is to
         effectively utilise information from multiple MS experiments that analyse the same protein
         sample. Since Percolator is a machine learning approach with an SVM at its core,
         integrating new information is straightforward as it simply requires to define additional
         features. Inspired by work that has been done by Shteynberg <em>et al.</em> in iProphet
-        <span class="cite cite-ref text-monospace">[<a class="no-style Shteynberg2011"
+        <span class="cite cite-ref">[<a class="no-style Shteynberg2011"
              href="#Shteynberg2011-ref"></a>]</span>, we here introduce five novel Percolator
         features that are computed across multiple replicate experiments of a given protein
         sample. In this section, we first motivate and describe each feature, and then analyse
@@ -895,7 +890,7 @@
       <h4 id="heading-3-2-1">Novel Percolator features aggregate information from multiple sibling
         experiments</h4>
 
-      <p class="text-justify">
+      <p>
         The proposed features build on a common assumption: If a particular peptide is identified
         in multiple experiments, it is more likely to be correct. Based on replicate "sibling"
         experiments, the introduced features (hereinafter referred to as "sibling features") can
@@ -905,8 +900,8 @@
         (summarised in <span class="cite"><a class="no-style" href="#table01">Table 1</a></span>).
       </p>
 
-      <figure id="table01" class="mt-4">
-        <figcaption class="mb-3">
+      <figure id="table01">
+        <figcaption>
           <strong>
             <span class="caption-number">Table 1:</span>
             Brief summary of sibling features.
@@ -941,7 +936,7 @@
           </thead>
           <tbody>
             <tr>
-              <th class="align-middle" rowspan="4">Sibling PSMs possess...</th>
+              <th rowspan="4">Sibling PSMs possess...</th>
               <td>...a common peptide</td>
               <td><span class="dot dot-positive"></span></td>
               <td><span class="dot dot-positive"></span></td>
@@ -977,7 +972,7 @@
         </table>
       </figure>
 
-      <p class="text-justify">
+      <p>
         <strong>Peptide-based sibling features track a single peptide across multiple
           datasets.</strong>
         Peptide-based features build on the assumption that multiple identifications of the same
@@ -997,7 +992,7 @@
         different ion charge.
       </p>
 
-      <p class="text-justify">
+      <p>
         <strong>Precursor-based sibling features model multiple identifications of the same
           precursor ion.</strong>
         For this set of features, we assume that a particular precursor ion observed in multiple
@@ -1019,7 +1014,7 @@
       <h4 id="heading-3-2-2">Peptide-based statistics improve Percolator's performance more than
         precursor-based statistics</h4>
 
-      <p class="text-justify">
+      <p>
         <strong>Sibling statistics assign higher scores to correctly identified peptides than
           peptides absent from a protein sample.</strong>
         Features fed to SVMs are most effective when they discriminate target classes clearly -
@@ -1046,8 +1041,8 @@
     </article>
   </div>
 
-  <div id="figure07-anchor" class="banner py-3">
-    <div class="container mx-auto">
+  <div id="figure07-anchor" class="banner">
+    <div class="container">
       <div class="content">
         <article>
 
@@ -1076,10 +1071,10 @@
     </div>
   </div>
 
-  <div class="container mx-auto">
-    <article class="content py-3">
+  <div class="container">
+    <article class="content">
 
-      <p class="text-justify">
+      <p>
         <strong>Leveraging information between multiple technical replicates increases the number
           of correct PSMs, but fails to detect higher numbers of unique peptides.</strong>
         When compared to Percolator not using information gathered from sibling experiments, we
@@ -1092,7 +1087,7 @@
         design as they favour high-scoring peptides.
       </p>
 
-      <p class="text-justify">
+      <p>
         <strong>Most of the described performance improvement stems from peptide-based features,
           whereas precursor-based features contribute very little.</strong>
         To measure the degree of performance contribution of the proposed sibling features, we
@@ -1117,8 +1112,8 @@
         effective to a similar degree for a range of search engines.
       </p>
 
-      <figure id="table02" class="mt-4">
-        <figcaption class="mb-3">
+      <figure id="table02">
+        <figcaption>
           <strong>
             <span class="caption-number">Table 2:</span>
             Contribution of peptide-based and precursor-based feature subsets to Percolator's
@@ -1161,8 +1156,8 @@
     </article>
   </div>
 
-  <div id="figure08-anchor" class="banner py-3">
-    <div class="container mx-auto">
+  <div id="figure08-anchor" class="banner">
+    <div class="container">
       <div class="content">
         <article>
 
@@ -1187,30 +1182,29 @@
     </div>
   </div>
 
-  <div class="container mx-auto">
-    <article class="content py-3">
+  <div class="container">
+    <article class="content">
 
       <h2 id="heading-4">Discussion and Outlook</h2>
 
-      <p class="text-justify">
+      <p>
         <strong>IDPEP versus Percolator.</strong>
         In this work, we have conducted an in-depth analysis of IDPEP, the PEP estimation tool
-        currently implemented in OpenMS <span class="cite cite-ref text-monospace">[<a
-             class="no-style Rost2016" href="#Rost2016-ref"></a>]</span>. Using a dataset of known
+        currently implemented in OpenMS <span class="cite cite-ref">[<a class="no-style Rost2016"
+             href="#Rost2016-ref"></a>]</span>. Using a dataset of known
         ground truth, we have shown that the parametric assumptions underlying IDPEP's mixture
         model are not satisfied when used in combination with three popular peptide search engines
-        (X!Tandem <span class="cite cite-ref text-monospace">[<a class="no-style Craig2004"
-             href="#Craig2004-ref"></a>]</span>, MS-GF+ <span
-              class="cite cite-ref text-monospace">[<a class="no-style Kim2014"
-             href="#Kim2014-ref"></a>]</span>, and Comet <span
-              class="cite cite-ref text-monospace">[<a class="no-style Eng2013"
-             href="#Eng2013-ref"></a>]</span>). In severe cases, IDPEP's heavy reliance on the
+        (X!Tandem <span class="cite cite-ref">[<a class="no-style Craig2004"
+             href="#Craig2004-ref"></a>]</span>, MS-GF+ <span class="cite cite-ref">[<a
+             class="no-style Kim2014" href="#Kim2014-ref"></a>]</span>, and Comet <span
+              class="cite cite-ref">[<a class="no-style Eng2013" href="#Eng2013-ref"></a>]</span>).
+        In severe cases, IDPEP's heavy reliance on the
         engine's ability to sufficiently distinguish correct from incorrect identifications leads
         to unsuccessful or bad fitting, thereby returning a list of PEPs that is virtually
-        unusable. Furthermore, Percolator <span class="cite cite-ref text-monospace">[<a
-             class="no-style Kall2007" href="#Kall2007-ref"></a>,<a class="no-style Spivak2009"
-             href="#Spivak2009-ref"></a>,<a class="no-style The2016"
-             href="#The2016-ref"></a>]</span> has been shown to consistently outperform IDPEP over
+        unusable. Furthermore, Percolator <span class="cite cite-ref">[<a class="no-style Kall2007"
+             href="#Kall2007-ref"></a>,<a class="no-style Spivak2009" href="#Spivak2009-ref"></a>,<a
+             class="no-style The2016" href="#The2016-ref"></a>]</span> has been shown to
+        consistently outperform IDPEP over
         all analysed datasets and search engines considered. Encouraged by its robustness and
         reliability, Percolator has subsequently been integrated into the OpenMS framework
         substituting IDPEP as default PEP estimation tool. We, therefore, provide easy access to
@@ -1218,7 +1212,7 @@
         into their mass spectrometric workflows.
       </p>
 
-      <p class="text-justify">
+      <p>
         <strong>Replicate MS experiments improve peptide identification.</strong>
         The second part of this work focused on improving PEP estimation by leveraging information
         between replicate runs in cases where a single protein sample has been analysed multiple
@@ -1228,9 +1222,9 @@
         shown to greatly increase the number of PSMs correctly identified. Especially features
         <em>Sibling Scores</em> and <em>Sibling Ions</em> showed high discriminative power (with
         respect to correct and incorrect identifications) which is in accordance with findings
-        regarding iProphet, a tool using similar sibling statistics <span
-              class="cite cite-ref text-monospace">[<a class="no-style Shteynberg2011"
-             href="#Shteynberg2011-ref"></a>]</span>. In contrast, while iProphet reports an
+        regarding iProphet, a tool using similar sibling statistics <span class="cite cite-ref">[<a
+             class="no-style Shteynberg2011" href="#Shteynberg2011-ref"></a>]</span>. In contrast,
+        while iProphet reports an
         increase in correct PSMs at a constant false discovery rate when accounting for precursor
         identical PSMs, we here find little contribution of those features towards Percolator's
         improved performance. However, even though iProphet's and our sibling statistics are
@@ -1238,22 +1232,22 @@
         implemented in different ways and embedded in different frameworks.
       </p>
 
-      <p class="text-justify">
+      <p>
         <strong>Implicit bias towards high-abundance proteins.</strong>
         Sibling features build on the general assumption that peptides identified in multiple runs
         are more likely to be correct. This assumption holds true when proteins of the same
         concentration are spiked into a common background. However, mixtures often contain
         proteins whose abundance might differ by magnitudes. In such cases, especially when used
         in conjunction with data-dependent acquisition of MS/MS spectra, the overlap of replicate
-        runs is mostly restricted to high-abundant proteins <span
-              class="cite cite-ref text-monospace">[<a class="no-style Liu2004"
-             href="#Liu2004-ref"></a>]</span>. Consequently, sibling features might fail to pick
+        runs is mostly restricted to high-abundant proteins <span class="cite cite-ref">[<a
+             class="no-style Liu2004" href="#Liu2004-ref"></a>]</span>. Consequently, sibling
+        features might fail to pick
         up low-abundant peptides. It is, therefore, essential to take mixture composition and the
         technical approach used into consideration when deciding on a strategy to deal with
         multiple replicate MS runs.
       </p>
 
-      <p class="text-justify">
+      <p>
         <strong>Finding optimal Percolator configurations that are effective for a wide range of
           mass spectrometric workflows is challenging.</strong>
         Even though leveraging information between replicate runs has been shown to improve PSM
@@ -1270,30 +1264,30 @@
         engine's main score. Instead, one can use carefully designed engine-specific functions
         distinguishing correct from incorrect identifications as clearly as possible by combining
         various bits of information an engine might return, similarly to what has been done in
-        PeptideProphet <span class="cite cite-ref text-monospace">[<a class="no-style Ma2012"
+        PeptideProphet <span class="cite cite-ref">[<a class="no-style Ma2012"
              href="#Ma2012-ref"></a>]</span>. This approach might improve PEP estimation in the
         case of MS-GF+, but might be beneficial in the case of other search engines as well.
       </p>
 
-      <p class="text-justify">
+      <p>
         <strong>From peptide to protein inference.</strong>
         Peptide inference is a critical step in a shotgun proteomics pipeline. However, in most
         cases, one is ultimately interested in protein inference while peptide inference is more
         of a necessity due to the shotgun approach used. In a typical mass spectrometric workflow,
         protein inference is based on the unique set of peptides identified from experimental
         spectra. In agreement with analysis results regarding iProphet <span
-              class="cite cite-ref text-monospace">[<a class="no-style Shteynberg2011"
+              class="cite cite-ref">[<a class="no-style Shteynberg2011"
              href="#Shteynberg2011-ref"></a>]</span>, sibling features failed to correctly
         identify a higher number of unique peptides. However, even though it is not the common use
         case, there are scenarios in which one is interested in identifying the peptides itself,
         e.g. for identification of expressed sequence tags to correct genome annotations <span
-              class="cite cite-ref text-monospace">[<a class="no-style Desiere2004"
+              class="cite cite-ref">[<a class="no-style Desiere2004"
              href="#Desiere2004-ref"></a>]</span>, or for collection of proteomic data in, for
-        example, the Peptide Atlas database <span class="cite cite-ref text-monospace">[<a
+        example, the Peptide Atlas database <span class="cite cite-ref">[<a
              class="no-style Desiere2006" href="#Desiere2006-ref"></a>]</span>.
       </p>
 
-      <p class="text-justify">
+      <p>
         <strong>Extension of the proposed framework to other highly overlapping datasets generated
           using approaches different from simple experiment replication.</strong>
         Essentially, simultaneously analysed MS datasets need to fulfil a single condition only:
@@ -1304,14 +1298,14 @@
         spectrometers, or by searching a set of observed spectra from the same experiment against
         a common peptide database using various peptide search engines. Regardless of the specific
         technique used, the resulting datasets tend to be highly overlapping while still offering
-        some individual information <span class="cite cite-ref text-monospace">[<a
-             class="no-style Elias2005" href="#Elias2005-ref"></a>]</span>, and as such are suited
+        some individual information <span class="cite cite-ref">[<a class="no-style Elias2005"
+             href="#Elias2005-ref"></a>]</span>, and as such are suited
         for the proposed analysis leveraging information between sibling datasets of PSMs. In the
         case of replicates generated by different machines, Percolator extended by sibling
         features can directly be applied. However, when using different peptide search engines,
         one needs to be careful about combining scores retrieved from different engines due to
-        their heterogeneity <span class="cite cite-ref text-monospace">[<a
-             class="no-style Shteynberg2013" href="#Shteynberg2013-ref"></a>]</span>.
+        their heterogeneity <span class="cite cite-ref">[<a class="no-style Shteynberg2013"
+             href="#Shteynberg2013-ref"></a>]</span>.
       </p>
 
       <div class="list-of-references">
@@ -1320,16 +1314,6 @@
 
     </article>
   </div>
-
-  <!-- Generate references that are cited on this page -->
-  <!-- <script>
-    generateReferences('assets/bib/a01-bib.json', '.list-of-references', '.cite-ref>a');
-  </script> -->
-
-  <!-- Footer -->
-  <!-- <div class="footer-copyright alert-danger fixed-bottom w-100 py-1 text-center small">
-    Not optimised for small devices
-  </div> -->
 
 </body>
 
