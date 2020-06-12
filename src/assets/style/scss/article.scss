@@ -208,3 +208,10 @@ table {
     transition: width 0.6s ease;
   }
 }
+
+.logo-bar {
+  // add space for progress bar on small devices
+  @include max-width($extra-small) {
+    margin-top: $spacing;
+  }
+}
