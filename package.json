@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "0.1.0",
+  "description": "Blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sophiamersmann/blog.git"
+  },
+  "author": "Sophia Mersmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sophiamersmann/blog/issues"
+  },
+  "homepage": "https://github.com/sophiamersmann/blog#readme",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}
