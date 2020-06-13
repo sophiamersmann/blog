@@ -31,14 +31,14 @@ article {
   .abstract {
     margin-bottom: 0;
     color: gray;
-    font-weight: 300;
+    font-weight: $light;
   }
 
   h1,
   h2,
   h3 {
     margin-bottom: $spacing / 4;
-    font-weight: 500;
+    font-weight: $bold;
     line-height: 1.2;
   }
 
@@ -169,7 +169,7 @@ table {
   }
 
   .ref .title {
-    font-weight: 500;
+    font-weight: $bold;
   }
 
   .ref .journal {
@@ -218,5 +218,58 @@ table {
   // add space for progress bar on small devices
   @include max-width($extra-small) {
     margin-top: $spacing;
+  }
+}
+
+.table-of-content-wrapper {
+  position: fixed;
+  top: 50%;
+  padding: $spacing $spacing $spacing 0;
+  transform: translateY(-50%);
+  @include max-width($medium) {
+    display: none;
+  }
+
+  #table-of-content {
+    max-width: 250px;
+    margin-left: 20px;
+    border-left: 3px solid $primary;
+    background-color: rgba(255, 255, 255, .8);
+    font-size: 0.9rem;
+
+    .heading {
+      color: $primary!important;
+    }
+
+    .list-group-item {
+      display: block;
+      padding: $spacing / 8 $spacing / 2;
+      border: none;
+      background-color: transparent;
+      color: #495057;
+      line-height: 1rem;
+    }
+    /* First level indentation */
+    .list-group .list-group-item {
+      padding-left: $spacing / 2;
+    }
+    /* Second level indentation */
+    .list-group-l2 .list-group-item {
+      padding-left: $spacing;
+    }
+    /* Third level indentation */
+    .list-group-l3 .list-group-item {
+      padding-left: $spacing * 2;
+    }
+
+    .list-group-item-action:hover {
+      background-color: whitesmoke;
+    }
+
+    .list-group-item-action.active {
+      border: none;
+      color: black;
+      font-weight: $bold;
+    }
   }
 }
