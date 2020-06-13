@@ -1,0 +1,57 @@
+figure svg {
+  overflow: visible; }
+
+figure .single {
+  width: 90%;
+  margin: 1rem auto; }
+
+figure .right {
+  position: absolute;
+  transform: translateX(650px); }
+  @media screen and (max-width: 991.98px) {
+    figure .right {
+      display: none; } }
+
+figure .plot-pair {
+  display: flex;
+  width: 90%;
+  margin: 1rem auto; }
+  figure .plot-pair > div {
+    flex: 1 0 auto; }
+
+figure .axis-y text,
+figure .label {
+  font-size: 0.9rem; }
+
+.figure0307-A .axis-y line,
+.figure0307-A .axis-y path {
+  visibility: hidden; }
+
+#figure07-B {
+  display: none; }
+
+#figure08 .axis path,
+#figure08 .axis line {
+  visibility: hidden; }
+
+#figure08 .tooltip {
+  background: #ebebeb;
+  border-radius: 25px;
+  font-size: .7rem;
+  height: 50px;
+  padding: 2px;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  width: 200px; }
+
+.super-title {
+  font-size: 1.2rem;
+  width: 40%;
+  margin: 0 auto 2rem; }
+  .super-title .title-percolator {
+    float: left;
+    color: steelblue; }
+  .super-title .title-idpep {
+    float: right;
+    color: orange; }

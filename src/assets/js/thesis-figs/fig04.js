@@ -49,12 +49,9 @@
     const scalesCorrect = {};
     const scalesROC = {};
     ENGINES.forEach((engine) => {
-      const plot = figure.append('div')
-        .attr('class', 'plot plot-pair');
-
       // add title
       const titleId = `title-for-${engine}`;
-      plot.append('div')
+      figure.append('div')
         .attr('id', titleId)
         .attr('class', 'title')
         .style('text-align', 'center')
@@ -63,23 +60,30 @@
         selectMixtureTemplate.clone().data('engine', engine),
       );
 
+      const plot = figure.append('div')
+        .attr('class', 'plot-pair');
+
       // add svg for the correct identifications plot
       const svgCorrect = plot.append('div')
-        .attr('class', 'plot plot-ncorrect')
+        .attr('class', 'plot-ncorrect')
         .append('svg')
         .attr('id', `svg-n-correct-ids-${engine}`)
-        .attr('width', width + margin.left + margin.right)
-        .attr('height', height + margin.top + margin.bottom)
+        .attr('viewBox', `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+        .attr('preserveAspectRatio', 'xMinYMin meet')
+        // .attr('width', width + margin.left + margin.right)
+        // .attr('height', height + margin.top + margin.bottom)
         .append('g')
         .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
       // add svg for the ROC curve
       const svgROC = plot.append('div')
-        .attr('class', 'plot plot-roc')
+        .attr('class', 'plot-roc')
         .append('svg')
         .attr('id', `svg-roc-${engine}`)
-        .attr('width', width + margin.left + margin.right)
-        .attr('height', height + margin.top + margin.bottom)
+        .attr('viewBox', `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+        .attr('preserveAspectRatio', 'xMinYMin meet')
+        // .attr('width', width + margin.left + margin.right)
+        // .attr('height', height + margin.top + margin.bottom)
         .append('g')
         .attr('transform', `translate(${margin.left},${margin.top})`);
 
