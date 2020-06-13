@@ -48,7 +48,7 @@ figure {
   text-align: center; }
   figure.plot {
     margin: 0; }
-  figure > figcaption {
+  figure.fig-table figcaption {
     margin-bottom: 1rem; }
   figure figcaption {
     font-size: 0.9rem;

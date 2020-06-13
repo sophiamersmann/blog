@@ -65,10 +65,10 @@ figure {
     margin: 0;
   }
 
-  & > figcaption {
+  &.fig-table figcaption {
     margin-bottom: $spacing / 2;
   }
-
+  
   figcaption {
     font-size: 0.9rem;
     line-height: 1.25;
