@@ -1,0 +1,26 @@
+#figure05 .plot {
+  display: inline;
+}
+
+#figure05-A svg,
+#figure05-B svg {
+  overflow: visible;
+}
+
+#figure05 .title {
+  text-align: center;
+}
+
+#figure05 .label {
+  font-size: .8rem;
+}
+
+#figure05 .label-engine {
+  font-size: .9rem;
+  font-weight: bolder;
+}
+
+#figure05 .line-zero {
+  stroke: black;
+  stroke-dasharray: 4;
+}

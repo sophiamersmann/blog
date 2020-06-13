@@ -1,0 +1,49 @@
+.figure0307-B {
+  position: absolute;
+  transform: translateX(650px);
+}
+
+.figure0307-A svg,
+.figure0307-B svg {
+  overflow: visible;
+}
+
+.figure0307-A .axis-y path,
+.figure0307-A .axis-y line {
+  visibility: hidden;
+}
+
+#figure07-B .axis-x path,
+#figure07-B .axis-x line {
+  visibility: hidden;
+}
+
+.figure0307-A .axis-y text {
+  font-size: .9rem;
+  transform: translateX(-20px);
+}
+
+.figure0307-A .label,
+.figure0307-B .label {
+  font-size: .8rem;
+}
+
+@media screen and (max-width: 991.98px) {
+  .figure0307-B {
+    display: none;
+  }
+}
+
+.super-title {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-percolator {
+  float: left;
+}
+
+.title-idpep {
+  float: right;
+}

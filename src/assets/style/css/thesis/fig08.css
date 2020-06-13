@@ -1,0 +1,32 @@
+#figure08 .axis path,
+#figure08 .axis line {
+  visibility: hidden;
+}
+
+#figure08 .tick text {
+  font-size: .8rem;
+}
+
+#figure08-A svg {
+  overflow: visible;
+}
+
+#figure08-A .legend .title {
+  font-size: .8rem;
+}
+
+#figure08-A .legend text {
+  font-size: .7rem;
+}
+
+#figure08-A .tooltip {
+  background: #ebebeb;
+  border-radius: 25px;
+  font-size: .7rem;
+  height: 50px;
+  padding: 2px;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  width: 200px;
+}
