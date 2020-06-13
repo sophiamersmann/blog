@@ -23,7 +23,7 @@ figure {
     width: 90%;
     margin: $spacing / 2 auto;
 
-    &>div {
+    & > div {
       flex: 1 0 auto;
     }
   }
@@ -46,28 +46,38 @@ figure {
 }
 
 #figure08 {
-  .axis path,
-  .axis line {
+  .axis line,
+  .axis path {
     visibility: hidden;
   }
 
+  .legend {
+    .title {
+      font-size: 0.8rem;
+    }
+
+    text {
+      font-size: 0.7rem;
+    }
+  }
+
   .tooltip {
-    background: #ebebeb;
-    border-radius: 25px;
-    font-size: .7rem;
+    position: absolute;
+    width: 200px;
     height: 50px;
     padding: 2px;
-    pointer-events: none;
-    position: absolute;
+    border-radius: 25px;
+    background: #ebebeb;
+    font-size: 0.7rem;
     text-align: center;
-    width: 200px;
+    pointer-events: none;
   }
 }
 
 .super-title {
-  font-size: 1.2rem;
   width: 40%;
   margin: 0 auto $spacing;
+  font-size: 1.2rem;
 
   .title-percolator {
     float: left;

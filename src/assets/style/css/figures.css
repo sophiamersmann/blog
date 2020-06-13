@@ -30,25 +30,31 @@ figure .label {
 #figure07-B {
   display: none; }
 
-#figure08 .axis path,
-#figure08 .axis line {
+#figure08 .axis line,
+#figure08 .axis path {
   visibility: hidden; }
 
+#figure08 .legend .title {
+  font-size: 0.8rem; }
+
+#figure08 .legend text {
+  font-size: 0.7rem; }
+
 #figure08 .tooltip {
-  background: #ebebeb;
-  border-radius: 25px;
-  font-size: .7rem;
+  position: absolute;
+  width: 200px;
   height: 50px;
   padding: 2px;
-  pointer-events: none;
-  position: absolute;
+  border-radius: 25px;
+  background: #ebebeb;
+  font-size: 0.7rem;
   text-align: center;
-  width: 200px; }
+  pointer-events: none; }
 
 .super-title {
-  font-size: 1.2rem;
   width: 40%;
-  margin: 0 auto 2rem; }
+  margin: 0 auto 2rem;
+  font-size: 1.2rem; }
   .super-title .title-percolator {
     float: left;
     color: steelblue; }
