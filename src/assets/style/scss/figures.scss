@@ -52,6 +52,10 @@ figure {
   }
 
   .legend {
+    @include max-width($extra-small) {
+      transform: translateX(-80px);
+    }
+
     .title {
       font-size: 0.8rem;
     }
