@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server .",
-    "scss": "node-sass --watch ./src/assets/style/scss -o ./src/assets/style/css"
+    "scss": "node-sass --watch ./src/assets/style/scss -o ./src/assets/style/css",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,9 @@
     "d3": "^5.16.0",
     "jquery": "^3.5.1",
     "mathjax": "^3.0.5",
-    "mathjs": "^7.0.1"
+    "mathjs": "^7.0.1",
+    "popper.js": "^1.16.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   }
 }
