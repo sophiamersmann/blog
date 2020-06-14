@@ -8,11 +8,17 @@
 
 .meta {
   display: flex;
+  flex-wrap: wrap;
   font-size: 0.95rem;
 
   & > div {
     flex: 1 0 0;
     padding: 0 $spacing / 4;
+
+    @include max-width($extra-small) {
+      flex: 1 0 50%;
+      margin-bottom: $spacing / 4;
+    }
   }
 
   .meta-heading {

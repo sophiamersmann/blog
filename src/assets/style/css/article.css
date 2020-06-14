@@ -5,10 +5,15 @@
 
 .meta {
   display: flex;
+  flex-wrap: wrap;
   font-size: 0.95rem; }
   .meta > div {
     flex: 1 0 0;
     padding: 0 0.5rem; }
+    @media screen and (max-width: 575.98px) {
+      .meta > div {
+        flex: 1 0 50%;
+        margin-bottom: 0.5rem; } }
   .meta .meta-heading {
     margin-bottom: 2px; }
 
