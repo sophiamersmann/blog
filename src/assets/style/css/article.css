@@ -1,11 +1,3 @@
-/* anonymous-pro-regular - latin */
-@font-face {
-  font-family: 'Anonymous Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Anonymous Pro Regular"), local("AnonymousPro-Regular"), url("../../fonts/anonymous-pro/anonymous-pro-v13-latin-regular.woff2") format("woff2"), url("../../fonts/anonymous-pro/anonymous-pro-v13-latin-regular.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
-
 .banner {
   border-top: 3px solid #336699;
   border-bottom: 3px solid #336699;
@@ -131,14 +123,14 @@ table {
   .ref-wrapper .ref-number {
     flex: 0 1 auto;
     margin-right: 1rem;
-    font-family: 'Anonymous Pro', monospace; }
+    font-family: monospace; }
   .ref-wrapper .ref {
     flex: 1 0 0; }
 
 .cite {
   color: #fcba03; }
   .cite.cite-ref {
-    font-family: 'Anonymous Pro', monospace; }
+    font-family: monospace; }
 
 .progress {
   display: flex;

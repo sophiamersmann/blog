@@ -1,5 +1,4 @@
 @import 'global';
-@import 'typo';
 
 .banner {
   border-top: 3px solid $secondary;
@@ -68,7 +67,7 @@ figure {
   &.fig-table figcaption {
     margin-bottom: $spacing / 2;
   }
-  
+
   figcaption {
     font-size: 0.9rem;
     line-height: 1.25;
@@ -183,7 +182,7 @@ table {
   .ref-number {
     flex: 0 1 auto;
     margin-right: $spacing / 2;
-    font-family: 'Anonymous Pro', monospace;
+    font-family: monospace;
   }
 
   .ref {
@@ -195,7 +194,7 @@ table {
   color: $primary;
 
   &.cite-ref {
-    font-family: 'Anonymous Pro', monospace;
+    font-family: monospace;
   }
 }
 
