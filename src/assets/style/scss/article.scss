@@ -14,7 +14,6 @@
   & > div {
     flex: 1 0 0;
     padding: 0 $spacing / 4;
-
     @include max-width($extra-small) {
       flex: 1 0 50%;
       margin-bottom: $spacing / 4;
@@ -166,6 +165,7 @@ table {
   line-height: 1.5;
 
   hr {
+    display: block!important;
     height: 0.25px;
     margin-bottom: $spacing / 2;
     border: 0;

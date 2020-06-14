@@ -113,6 +113,7 @@ table {
   font-size: 0.75rem;
   line-height: 1.5; }
   .list-of-references hr {
+    display: block !important;
     height: 0.25px;
     margin-bottom: 1rem;
     border: 0;
