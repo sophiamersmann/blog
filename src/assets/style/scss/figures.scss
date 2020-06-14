@@ -89,3 +89,9 @@ figure {
     color: orange;
   }
 }
+
+.hide-when-small {
+  @include max-width($medium) {
+    display: none;
+  }
+}
