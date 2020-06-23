@@ -17,7 +17,7 @@ figure .plot-pair {
   width: 90%;
   margin: 1rem auto; }
   figure .plot-pair > div {
-    flex: 0 1 auto; }
+    flex: 1 1 auto; }
 
 figure .axis-y text,
 figure .label {
