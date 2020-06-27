@@ -1,4 +1,4 @@
-@import 'global';
+@import "global";
 
 .banner {
   border-top: 3px solid $secondary;
@@ -165,7 +165,7 @@ table {
   line-height: 1.5;
 
   hr {
-    display: block!important;
+    display: block !important;
     height: 0.25px;
     margin-bottom: $spacing / 2;
     border: 0;
@@ -239,11 +239,11 @@ table {
     max-width: 250px;
     margin-left: 20px;
     border-left: 3px solid $primary;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, 0.8);
     font-size: 0.9rem;
 
     .heading {
-      color: $primary!important;
+      color: $primary !important;
     }
 
     .list-group-item {

@@ -6,7 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server .",
-    "scss": "node-sass --watch ./src/assets/style/scss -o ./src/assets/style/css"
+    "scss": "node-sass --watch ./src/assets/style/scss -o ./src/assets/style/css",
+    "pretty-quick": "pretty-quick"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "repository": {
     "type": "git",
@@ -20,7 +26,10 @@
   "homepage": "https://github.com/sophiamersmann/blog#readme",
   "devDependencies": {
     "http-server": "^0.12.3",
-    "node-sass": "^4.14.1"
+    "husky": "^4.2.5",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
   },
   "dependencies": {}
 }
