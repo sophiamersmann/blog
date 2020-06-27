@@ -1,1 +1,7 @@
-# blog
+# Blog
+
+**Install**
+
+```
+npm install
+```
